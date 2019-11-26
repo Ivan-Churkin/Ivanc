@@ -1,0 +1,83 @@
+.slider-container {
+	position: relative;
+	margin: 0px;
+	width: 40%;
+	height: 0;
+	padding-bottom: 40%;
+	border: 0px solid #F08080;
+}
+
+.slides {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: .5s;
+    -moz-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+
+.slides img {
+	width: 100%;
+	height: 100%;
+}
+
+.slide_img {
+	display: none;
+}
+
+#arrow_next label{
+	color: rgba(0, 0, 0, .0);
+	position: absolute;
+	visibility: hidden;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+#img_1:checked ~ #first,
+#img_2:checked ~ #second,
+#img_3:checked ~ #third 
+{
+	visibility: visible;
+	opacity: 1;
+}
+
+
+#img_1:checked ~ #arrow_next label:nth-child(3),
+#img_2:checked ~ #arrow_next label:nth-child(1),
+#img_3:checked ~ #arrow_next label:nth-child(2)
+{
+	visibility: visible;
+}
+
+.Beauty 
+		{ 
+			display: block;
+			max-width: 780px;
+			margin-block-start: 1em;
+			margin-block-end: 1em; 
+			margin-inline-start: 1em; 
+			margin-inline-end: 1em;
+			line-height:1.7; 
+			font-size: 1.7em;
+			font-family: 'Source Sans Pro', sans-serif;
+			
+	}
+	
+		.XS 
+		{
+			font-size: 1rem;
+			
+		
+		}
+		
+		.images 
+		{
+			max-width: 100%;
+			height: auto;
+		}
