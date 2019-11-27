@@ -1,0 +1,17 @@
+ErrorDocument 404 http://ivanc.ru
+
+RewriteEngine on
+
+RewriteBase /
+
+#Убираем index
+RewriteRule ^index.html$ / [QSA,R]
+#Убираем .html
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP
+RewriteRule ^([^.]+)\.html$ http://ivanc.ru/$1 [R=301,L]
+RewriteCond %{REQUEST_URI} !(\.[^./]+)$
+RewriteCond %{REQUEST_fileNAME} !-d
+RewriteCond %{REQUEST_fileNAME} !-f
+RewriteRule (.*) /$1.html [L]
+# Begin Muse Generated redirects
+# End Muse Generated redirects
